@@ -23,4 +23,3 @@ var isUgly = function(num) {
 	return num === 1;
     
 };
-

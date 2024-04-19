@@ -1,3 +1,29 @@
+// 更优方法：哈希
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    const obj = {};
+    const res = [];
+
+    for (let i = 0 , len = nums.length ; i < len ; i ++) {
+        if (Number.isInteger(obj[nums[i]])) {
+            res.push(obj[nums[i]]);
+            res.push(i);
+            return res;
+        }
+        const temp = target - nums[i];
+        obj[temp] = i;
+    }
+    return res;
+};
+
+
+
+
+// 方法二：双指针
 /**
  * @param {number[]} nums
  * @param {number} target

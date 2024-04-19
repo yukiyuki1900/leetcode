@@ -16,7 +16,6 @@ var maxArea = function(height) {
     var right = height.length - 1;
 
     while( left < right ) {
-
         var container = minfunc(height[left], height[right]) * (right - left);
         if(container > water) {
             water = container;
